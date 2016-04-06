@@ -38,6 +38,3 @@ DEPENDENCIES
   cf-uaac
   eventmachine (= 1.0.4)
   rake
-
-BUNDLED WITH
-   1.11.2
