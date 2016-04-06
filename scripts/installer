@@ -50,7 +50,7 @@ update_profile() {
   mac:   brew install curl
 "
 
-cli_version=$(curl -s https://raw.githubusercontent.com/cloudfoundry-community/traveling-cf-admin/master/cf-cli-release/version)
+cli_version=$(curl -s https://raw.githubusercontent.com/william-tran/traveling-cf-admin/master/cf-cli-release/version)
 
 if [ "$os_name" == "Linux" ]; then
   update_profile $HOME/.zshrc || update_profile $HOME/.bashrc || update_profile $HOME/.bash_profile
@@ -87,7 +87,7 @@ rm -rf ${download_dir}
 mkdir -p ${download_dir}
 download_file=${download_dir}/${asset_filename}
 
-download_url="https://github.com/cloudfoundry-community/traveling-cf-admin/releases/download/v${cli_version}/${tar_filename}.tar.gz"
+download_url="https://github.com/william-tran/traveling-cf-admin/releases/download/v${cli_version}/${tar_filename}.tar.gz"
 
 # https://github.com/cloudfoundry-community/traveling-cf-admin/releases/download/v6.9.0.1/cf-admin-6.9.0.1-linux-x86.tar.gz
 # https://github.com/cloudfoundry-community/traveling-cf-admin/releases/download/v6.9.0.1/cf-admin-6.9.0.1-linux-x86_64.tar.gz

@@ -43,7 +43,7 @@ namespace :release do
     sh "git commit -a -m 'Releasing #{tag}'; true"
     sh "git push origin master"
     sh "github-release release \
-      --user cloudfoundry-community --repo #{GITHUB_REPO} --tag #{tag} \
+      --user william-tran --repo #{GITHUB_REPO} --tag #{tag} \
       --name '#{RELEASE_NAME} #{tag}' \
       --description '#{RELEASE_DESCRIPTION}'"
     sh "git pull origin master" # to get tag created
@@ -60,7 +60,7 @@ namespace :release do
     end
     files.each do |file|
       sh "github-release upload \
-        --user cloudfoundry-community --repo #{GITHUB_REPO} --tag #{tag} \
+        --user william-tran --repo #{GITHUB_REPO} --tag #{tag} \
         --name #{file} --file #{file}"
     end
   end
